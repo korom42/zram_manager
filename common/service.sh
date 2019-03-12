@@ -5,6 +5,7 @@ function write() {
 function round() {
   printf "%.${2}f" "${1}"
 }
+    sleep 30
     CONFIG=<CONFIG>
     TOTAL_RAM=$(awk '/^MemTotal:/{print $2}' /proc/meminfo) 2>/dev/null
 
@@ -101,8 +102,6 @@ function disable_swap() {
 	setprop zram.disksize 0
 	write /proc/sys/vm/swappiness 0
 }
-
-sleep 30
 
     if [ ${CONFIG} -eq 0 ];then
 	disable_swap
