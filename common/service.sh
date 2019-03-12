@@ -6,7 +6,6 @@ function round() {
   printf "%.${2}f" "${1}"
 }
     CONFIG=<CONFIG>
-
     TOTAL_RAM=$(awk '/^MemTotal:/{print $2}' /proc/meminfo) 2>/dev/null
 
 	if [ -f /system/bin/swapon ] ; then
@@ -23,12 +22,7 @@ function round() {
 	else
 	swff="swapoff"
 	fi	
-	
-zram_dev()
-{
-	local idx="$1"
-	echo "/dev/zram${idx:-0}"
-}
+
 zram_reset()
 {
 	write "/sys/block/$1/reset" 1
@@ -83,12 +77,11 @@ function enable_swap() {
 	dd if=/dev/zero of=${zram_dev} bs=1m count=${disksz_mb}
 	mkswap ${zram_dev}
 	${swon} ${zram_dev} -p 32758
-		
 	setprop vnswap.enabled true
 	setprop ro.config.zram true
 	setprop ro.config.zram.support true
 	setprop zram.disksize ${disksz}
-	write /proc/sys/vm/swappiness 60
+	write /proc/sys/vm/swappiness 100
 }
 function disable_swap() {
 
@@ -109,9 +102,11 @@ function disable_swap() {
 	write /proc/sys/vm/swappiness 0
 }
 
+sleep 30
+
     if [ ${CONFIG} -eq 0 ];then
 	disable_swap
-	else
+    else
 	enable_swap
-	fi
-	exit 0
+    fi
+    exit 0
