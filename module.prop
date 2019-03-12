@@ -1,0 +1,9 @@
+id=zram_config
+name=zRAM/SWAP Manager
+version=v1.0
+versionCode=100
+author=korom42
+description=This module allows you to enable or disable zRam. Using zRam increases performance by avoiding disk paging and instead using a compressed block device in the physical RAM.
+support=https://forum.xda-developers.com/apps/magisk/xz-lxt-1-0-insane-battery-life-12h-sot-t3700688
+minMagisk=1530
+

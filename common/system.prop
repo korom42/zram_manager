@@ -1,0 +1,89 @@
+# LKT™ - Begin
+
+# Misc
+# sys.use_fifo_ui=1
+# persist.sys.scrollingcache=3
+# windowsmgr.max_events_per_sec=300
+# ro.max.fling_velocity=13800 
+# ro.min.fling_velocity=10500
+# debug.kill_allocating_task=0
+MIN_HIDDEN_APPS=false
+ACTIVITY_INACTIVE_RESET_TIME=false
+MIN_RECENT_TASKS=false
+PROC_START_TIMEOUT=false
+CPU_MIN_CHECK_DURATION=false
+GC_TIMEOUT=false
+SERVICE_TIMEOUT=false
+MIN_CRASH_INTERVAL=false
+ENFORCE_PROCESS_LIMIT=false
+# ro.config.fha_enable=true
+# ro.config.dha_cached_max=16
+# ro.config.dha_empty_max=32
+# ro.config.dha_empty_init=32
+# ro.config.dha_lmk_scale=0.990
+# ro.config.dha_th_rate=1.4
+ro.config.sdha_apps_bg_max=64
+ro.config.sdha_apps_bg_min=8
+# Enable power saving mode
+# power.saving.mode=1
+# ro.config.hw_power_saving=true
+persist.radio.add_power_save=1
+# Disable fast dormancy
+ro.fast.dormancy=1
+ro.config.hw_fast_dormancy=1
+ro.ril.fast.dormancy.rule=1
+ro.semc.enable.fast_dormancy=true
+# Disable IMS debug logs
+# persist.ims.disableDebugLogs=1 
+# Disable quality control
+# persist.radio.oem_socket=false 
+
+# Increase Wi-fi scanning interval
+wifi.supplicant_scan_interval=180
+
+# Disable stats logging & monitoring
+debug.atrace.tags.enableflags=0
+profiler.force_disable_ulog=true
+profiler.force_disable_err_rpt=true
+profiler.force_disable_ulog=1
+profiler.force_disable_err_rpt=1
+ro.config.nocheckin=1
+debugtool.anrhistory=0
+ro.com.google.locationfeatures=0
+ro.com.google.networklocation=0
+profiler.debugmonitor=false
+profiler.launch=false
+profiler.hung.dumpdobugreport=false
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
+persist.sys.purgeable_assets=1
+
+# Doze parameters
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.sensor.sleep.control=1
+doze.display.supported=true
+doze.pulse.notifications=true
+doze.use.accelerometer=0
+doze.pickup.vibration.threshold=2000
+doze.pulse.brightness=5
+doze.pulse.delay.in=200
+doze.pulse.duration.in=1000
+doze.pulse.duration.out=1000
+doze.pulse.duration.visible=3000
+doze.pulse.proxcheck=0
+doze.pulse.schedule=1s,10s,30s,60s,120s
+doze.pulse.schedule.resets=3
+doze.pulse.sigmotion=0
+doze.shake.acc.threshold=10
+doze.vibrate.sigmotion=0
+debug.doze.component=0
+
+# Faster boot mode
+# persist.sys.shutdown.mode=hibernate
+# ro.config.hw_quickpoweron=true
+
+# Set default power mode to low power for encoder
+# vidc.debug.perf.mode=2
+
+# LKT™ - End
