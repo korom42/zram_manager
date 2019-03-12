@@ -40,6 +40,8 @@ function enable_swap() {
 	disksz_mb=2048
 	elif [ ${TOTAL_RAM} -gt 2000000 ]; then
 	disksz_mb=1792
+	elif [ ${TOTAL_RAM} -gt 1000000 ]; then
+	disksz_mb=1024
 	else
 	disksz_mb=896
 	fi
