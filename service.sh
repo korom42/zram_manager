@@ -122,9 +122,6 @@ function disable_swap() {
 		${swff} ${zram_dev} && zram_reset ${zram}
 	} done
 	
-	
-    local 
-
 	setprop vnswap.enabled false
 	setprop ro.config.zram false
 	setprop ro.config.zram.support false
