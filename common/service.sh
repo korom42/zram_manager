@@ -99,7 +99,7 @@ function enable_swap() {
 	setprop ro.config.zram true
 	setprop ro.config.zram.support true
 	setprop zram.disksize ${disksz}
-	write /proc/sys/vm/swappiness 40
+	write /proc/sys/vm/swappiness 100
 	write /proc/sys/vm/swap_ratio_enable 1
 	write /proc/sys/vm/swap_ratio 70
 }
