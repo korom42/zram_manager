@@ -86,7 +86,6 @@ set_permissions() {
   # set_perm  <filename>                         <owner> <group> <permission> <contexts> (default: u:object_r:system_file:s0)
   
   # set_perm $UNITY/system/lib/libart.so 0 0 0644
-:
 }
 
 # Custom Variables for Install AND Uninstall - Keep everything within this function - runs before uninstall/install
@@ -95,4 +94,3 @@ unity_custom() {
 }
 
 # Custom Functions for Install AND Uninstall - You can put them here
-

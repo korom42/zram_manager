@@ -106,7 +106,7 @@ function enable_swap() {
 function disable_swap() {
 
     for zram in `blkid | grep swap | awk -F[/:] '{print $4}'`; do {
-		zram_dev="${zram_dev}"
+		zram_dev="/dev/block/${zram}"
 		dev_index="$( echo $zram | grep -o "[0-9]*$" )"
 		write /sys/class/zram-control/hot_remove ${dev_index}
 		${swff} ${zram_dev} && zram_reset ${zram}

@@ -6,6 +6,10 @@ zRAM is a module of the Linux/Android kernel, it increases performance by avoidi
 Unlike what some myths claim zRAM does not slow down your device, neither affect battery life. It uses extremely fast algorithms that can compress/decompress large amount of data in a fraction of second. It is very useful for android by helping to keep background apps open while multitasking. It can be useful even on high RAM devices with 6-8GB RAM and in older phones it can offer a signficant performance boost.
 
 ## Changelog
+*v1.3 14.04.2019*
+- Unity template update 4.4
+- Bug fixes
+
 *v1.2 14.04.2019*
 - Unity template update 4.0 (Magisk 19 support)
 
